@@ -3,23 +3,20 @@ import java.util.ArrayList;
 
 public class FourSum {
     public static void result (List<Integer> arr) {
-        int n = arr.size(), sum = 0;
+        // in the previous solution of O(n2) i was beaten by the constraints..
+        long sum = 0;
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
-        for(int i=0; i<n; i++) {
-            for(int j=0; j<n; j++) {
-                if(j != n-i-1) {
-                    sum += arr.get(j);
-                }
-            }
-            if(sum < min) min = sum;
-            if(sum > max) max = sum;
-            sum = 0;
+        // find max and min element
+        for(int num : arr) {
+            sum += num;
+            if(num < min) min = num;
+            if(num > max) max = num;
         }
-        System.out.println("Min: "+min+" Max: "+max);
+        System.out.println("Min: "+(sum - max)+" Max: "+(sum - min));
     }
     public static void main(String [] args) {
-        List<Integer> arr = List.of(1,2,3,4,5);
+        List<Integer> arr = List.of(256741038,623958417,467905213,714532089,938071625);
         result(arr);
     }
 }
