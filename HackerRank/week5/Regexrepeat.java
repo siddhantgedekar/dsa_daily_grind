@@ -3,8 +3,6 @@ import java.util.regex.*;
 
 public class Regexrepeat {
     public static void main(String [] args) {
-        Scanner sc = new Scanner(System.in);
-        // int n = Integer.parseInt(sc.nextLine());
         String s = "Goodbye bye bye world world world";
         
         String regex = "\\b(\\w+)(\\s+\\1\\b)+";
