@@ -773,3 +773,30 @@ public class ArrList {
     }
 }
 ```
+
+### 1D Array (Part 2)
+- **Problem Explanation**: Given a game represented by an array of 0s (free) and 1s (blocked), a player starts at index 0 and can move forward by 1, backward by 1, or jump forward by `leap`. The goal is to determine whether the player can reach the end of the array (or beyond) without landing on a blocked cell. The solution performs a depth-first search and marks visited cells to avoid infinite looping.
+```
+public class ArrList2 {
+    public static boolean canWin (int leap, int[] game, int i) {
+        if(i >= game.length)
+            return true;
+
+        if(i < 0 || game[i] == 1)
+            return false;
+
+        game[i] = 1; // mark visited
+
+        return canWin(leap, game, i + leap) ||
+            canWin(leap, game, i + 1) ||
+            canWin(leap, game, i - 1);
+    }
+
+    public static void main(String [] args) {
+        int leap = 3;
+        int[] game = {0, 0, 0, 0, 0, 0};
+
+        System.out.println(canWin(leap, game, 0) ? "YES" : "NO");
+    }
+}
+```
