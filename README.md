@@ -941,3 +941,53 @@ public class Generics {
 ```
 ```
 ```
+## Week 8
+
+### Comparators
+- **Problem Explanation**: Sort a list of `Player` objects by descending score and then lexicographically by name when scores are tied. Uses a custom comparator implementation in the `Checker` class.
+```
+import java.io.*;
+import java.util.*;
+
+class Player {
+    String name;
+    int score;
+
+    Player(String name, int score) {
+        this.name = name;
+        this.score = score;
+    }
+}
+
+public class Comparators {
+    static class Checker implements Comparator<Player> {
+        public int compare(Player a, Player b) {
+            if(a.score < b.score) {
+                return 1;
+            } else if (a.score > b.score) {
+                return -1;
+            } else {
+                return a.name.compareTo(b.name);
+            }
+        }
+    }
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt();
+        Player[] players = new Player[n];
+        
+        for (int i = 0; i < n; i++) {
+            String name = sc.next();
+            int score = sc.nextInt();
+            players[i] = new Player(name, score);
+        }
+        Arrays.sort(players, new Checker());
+        
+        for (Player p : players) {
+            System.out.println(p.name + " " + p.score);
+        }
+    }
+}
+```
