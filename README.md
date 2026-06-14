@@ -977,6 +977,9 @@ public class Comparators {
         
         int n = sc.nextInt();
         Player[] players = new Player[n];
+
+## Changelog
+- 2026-06-14: Updated [HackerRank/week8/Comparators.java](HackerRank/week8/Comparators.java#L1-L200): removed interactive prompts, made input non-interactive (reads from STDIN), and added documentation + clearer comparator implementation.
         
         for (int i = 0; i < n; i++) {
             String name = sc.next();
