@@ -979,18 +979,6 @@ public class Comparators {
         Player[] players = new Player[n];
 
 ## Changelog
-- 2026-06-14: Updated [HackerRank/week8/Comparators.java](HackerRank/week8/Comparators.java#L1-L200): removed interactive prompts, made input non-interactive (reads from STDIN), and added documentation + clearer comparator implementation.
-        
-        for (int i = 0; i < n; i++) {
-            String name = sc.next();
-            int score = sc.nextInt();
-            players[i] = new Player(name, score);
-        }
-        Arrays.sort(players, new Checker());
-        
-        for (Player p : players) {
-            System.out.println(p.name + " " + p.score);
-        }
-    }
-}
+- 2026-06-14: Updated [HackerRank/week8/Comparators.java](HackerRank/week8/Comparators.java): removed interactive prompts, made input non-interactive (reads from STDIN), and added documentation + clearer comparator implementation.
+- 2026-06-15: Added [HackerRank/week8/Comparator2.java](HackerRank/week8/Comparator2.java): documented student sorting comparator and ensured non-interactive STDIN input format.
 ```
