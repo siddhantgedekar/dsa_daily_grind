@@ -1055,3 +1055,4 @@ public class Comparator2 {
 ## Changelog
 - 2026-06-14: Updated `HackerRank/week8/Comparators.java`: removed interactive prompts, made input non-interactive, and added documentation.
 - 2026-06-15: Added `HackerRank/week8/Comparator2.java`: documented student sorting comparator and input format.
+ - 2026-07-11: Updated `HackerRank/python/exception.py`: added `parse_config()` demonstrating exception chaining with `raise ... from`, improved file-read error handling, and documented example usage in the script.
