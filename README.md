@@ -2,6 +2,8 @@
 
 This README documents my solutions to various HackerRank problems, organized by weeks. Each section includes a brief problem explanation followed by the implemented Java code.
 
+ 
+
 ## Week 1
 
 ### Solve Me First
@@ -21,7 +23,6 @@ public class AddTwoNum {
     public static void main(String [] args) {
         Scanner in = new Scanner(System.in);
         int a;
-        System.out.print("Number 1: ");
         a = in.nextInt();
         int b;
         System.out.print("Number 2: ");
@@ -73,7 +74,6 @@ public class CompareTriplets {
                 res.set(1, res.get(1) + 1);
             }
         }
-        return res;
     }
     public static void main(String [] args) {
         List<Integer> a = List.of(5, 6, 7);
@@ -130,9 +130,6 @@ public class Diagonaldiff {
             List.of(10, 8, -12)
         );
         // System.out.println(matrix.get(matrix.get(0).size() -1).get(0));
-        int sum = res(matrix);
-        System.out.println("Sum: "+sum);
-    }
 }
 ```
 
@@ -1056,3 +1053,5 @@ public class Comparator2 {
 - 2026-06-14: Updated `HackerRank/week8/Comparators.java`: removed interactive prompts, made input non-interactive, and added documentation.
 - 2026-06-15: Added `HackerRank/week8/Comparator2.java`: documented student sorting comparator and input format.
  - 2026-07-11: Updated `HackerRank/python/exception.py`: added `parse_config()` demonstrating exception chaining with `raise ... from`, improved file-read error handling, and documented example usage in the script.
+ - 2026-07-11: Updated `HackerRank/python/exception.py`: added `parse_config()` demonstrating exception chaining with `raise ... from`, improved file-read error handling, and documented example usage in the script.
+- 2026-07-23: Updated `HackerRank/python/classinpython.py`: added module-level documentation, comprehensive docstrings for `Dog`, and an `if __name__ == "__main__":` example usage block.
