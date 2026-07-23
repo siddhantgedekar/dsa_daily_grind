@@ -83,7 +83,6 @@ person = Person('John Doe', 30)
 attr_name = input("Enter attribute you want to see: ")
 print(getattr(person, attr_name, 'Attribute not found'))
 
-
 if __name__ == "__main__":
     # Create instances of the Dog class
     dog1 = Dog('Huskey', 12)
